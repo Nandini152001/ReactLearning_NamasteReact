@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn React</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- this h1 tag of id="rootTop" won't be replaced by root.render as we aren't rendering this root right. -->
+     <!-- eg: if you'll render rootTop like you did root then it'll be replaced same way
+        const h1rootTop = React.createElement('h1', {id: "rootTop"}, "I'm rootTOP");
+        const rootTop = ReactDOM.createRoot(document.getElementById("rootTop"));
+        rootTop.render(h1rootTop);
+        console.log('h1rootTop'); -->
+
+    <h1 id="rootTop">Top of root</h1> 
+    <!-- Hello World with basic HTML! -->
+    <div id="root">
+        <h1>Welcome in React World!</h1> 
+        <!-- this h1 tag will be replaced by root.render later in our code -->
+    </div>
+    <h1 id="rootBelow">Below the root</h1>
+    <!-- this h1 tag of id="rootBelow" won't be replaced by root.render as we aren't rendering this root right. -->
+     <!-- _____________________________________________________ -->
+    <!-- Hello World with basic JS! -->
+    <!-- <script>
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Day1 Learning";
+        const root = document.getElementById("root");
+        root.appendChild(heading);
+    </script> -->
+    <!-- ______________________________________________________ -->
+    <!-- Hello World using React CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- <script>
+        const heading = React.createElement("h1", {}, "Hello World from React CDN!");
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(heading);
+    </script> -->
+
+    <script src="./App.JS"></script>
+
+    <!-- Creating a Nested HTML tag structure and render it to DOM-->
+     <!-- eg:  -->
+      <!-- <div id="parent">
+        <div id="child">
+            <h1>I'm a child!</h1>
+            //what if one more sibling to h1 like h2, see how to do using react using array in App.js
+            <h2>I'm a child2!</h2>
+        </div>
+      </div> -->
+
+</body>
+</html>
