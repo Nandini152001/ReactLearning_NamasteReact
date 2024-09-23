@@ -16,6 +16,7 @@ const nestedele = React.createElement(
                 )
      ]
     );
+    
 root.render(nestedele);
 console.log(nestedele);
 
