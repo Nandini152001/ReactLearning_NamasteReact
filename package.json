@@ -4,7 +4,7 @@
   "description": "Learning React from Akshay Saini",
   "scripts": {
     "start": "parcel index.html",
-    "build":"parcel build index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "\"Nandini Goyal\"",
