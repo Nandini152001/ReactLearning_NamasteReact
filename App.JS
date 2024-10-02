@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 const heading = React.createElement("h1", {id: "h1tag" ,xyz: "abc"}, "Hello World from React CDN!");
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
@@ -7,7 +10,7 @@ console.log(heading);
 const nestedele = React.createElement(
     "div", {id: "parent"},
      [React.createElement("div", {id: "child1"},
-        [ React.createElement("h1", {id: "h1tagnested1"}, "I'm 1st nested h1 tag"),
+        [ React.createElement("h1", {id: "h1tagnested1"}, "I'm 1st nested h1 tag in React"),
              React.createElement("h2", {id: "h2tagnested1"}, "I'm 1st nested h2 tag")]
             ),
         React.createElement("div", {id: "child2"},
