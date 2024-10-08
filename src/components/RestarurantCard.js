@@ -5,7 +5,7 @@ const RestarurantCard = (props) => {
     const { resData } = props;
   
     // OBJECT DESTRUCTING AND OPTIONAL CHAINING
-    const { name, cloudinaryImageId, cuisines, avgRating, costForTwo} =
+    const { name, cloudinaryImageId, cuisines, avgRating, costForTwo, deliveryTime} =
       resData?.info;
   
     // console.log(resData?.data);
@@ -28,7 +28,7 @@ const RestarurantCard = (props) => {
         <h4> {cuisines.join(", ")}</h4>
         <h4>{avgRating}</h4>
         <h4>{costForTwo}</h4>
-        <h4>{resData.info.sla.deliveryTime + " min"}</h4>
+        <h4>{deliveryTime + " min"}</h4>
       </div>
     );
   };
