@@ -1,7 +1,7 @@
 import RestarurantCard from "./RestarurantCard";
 import resList from "../utils/mockData";
-import {useState} from "react";
-
+import {useState, useEffect} from "react";
+import Shimmer from "./Shimmer";
 const Body = () => {
   // Local State Variable - Super powerful Variable
   const [listOfRestaurants, setListOfRestaurants] = useState(resList);
@@ -44,6 +44,25 @@ const Body = () => {
   }
   ];
 
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  // const fetchData = async () => {
+  //     const data =await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+  //     const json = await data.json();
+  //     console.log(json);
+  //     // CORS - Cross Origin Request issue
+  //     // WATCH: https://www.youtube.com/watch?v=tcLW5d0KAYE
+  // }
+
+  // Conditional Rendering
+  // if(listOfRestaurants.length === 0 ){
+  //   // return <h1>Loading.....</h1>;
+  //   return <Shimmer/>;
+  // }
+
+  console.log(listOfRestaurants);
   return (
     <div className="body">
       {/* <div className="search">Search</div> */}
@@ -54,17 +73,16 @@ const Body = () => {
             () => {
             // console.log("Button clicked!");
             // Filter Logic
-            setListOfRestaurants()
-            const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.5)
+            const filteredList = listOfRestaurants.filter((res) => res.info.avgRating > 4.5);
             setListOfRestaurants(filteredList)
-            console.log(listOfRestaurants);
+            // console.log(listOfRestaurants);.
           }
         }
-          onMouseOver =  {
-            () => {
-              console.log('Mousing Over!');
-            }
-          }
+          // onMouseOver =  {
+          //   () => {
+          //     console.log('Mousing Over!');
+          //   }
+          // }
         >
           Top Rated Restaurant
         </button>

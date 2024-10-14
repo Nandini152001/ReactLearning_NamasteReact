@@ -25,3 +25,12 @@ import Component from "path";
 
 export const Component;
 import {Component} from "path";
+
+<!-- React Fiber: (React Diff and Reconciliation Algorithm) -->
+READ: https://github.com/acdlite/react-fiber-architecture
+
+<!-- React Hooks -->
+-> These are nothing but Normal JS  Utility function superpowered with react.
+
+useState() and useEffect() are mostly used Hooks.
+
